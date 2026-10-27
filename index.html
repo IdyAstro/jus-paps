@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f58213">
+    <meta name="description"
+        content="PAP’S Mali : boissons fruitées et sodas. Explorez nos saveurs, notre histoire et notre univers.">
+    <title>PAP’S Mali — La fraîcheur a du caractère</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: '#f58213', deep: '#b94d06', cream: '#fff8f1' }, fontFamily: { sans: ['DM Sans', 'sans-serif'], display: ['Manrope', 'sans-serif'] } } } }</script>
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script defer src="assets/js/home-premium.js"></script>
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body class="overflow-x-hidden bg-white font-sans text-stone-950 antialiased selection:bg-orange-200">
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-white focus:p-4">Aller
+        au contenu</a>
+    <div id="progress" class="fixed left-0 top-0 z-[90] h-1 w-0 bg-brand"></div>
+    <div id="site-header-slot"></div>
+    <main id="main" class="pt-[82px]">
+        <!-- HERO -->
+        <section id="hero"
+            class="relative isolate flex min-h-[720px] items-center overflow-hidden bg-orange-950 text-white lg:min-h-[790px]">
+            <img id="heroImage" src="assets/images/hero3.jpg" alt="L'univers des boissons PAP’S Mali"
+                fetchpriority="high" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+            <div class="absolute inset-0 -z-10 bg-gradient-to-r from-orange-950/85 via-orange-950/45 to-orange-950/10">
+            </div>
+            <div
+                class="pointer-events-none absolute -left-28 top-10 size-[450px] rounded-full bg-orange-500/20 blur-[110px]">
+            </div>
+            <div
+                class="relative mx-auto grid w-full max-w-[1440px] items-center gap-12 px-6 py-28 lg:grid-cols-[1.15fr_.85fr] lg:px-12">
+                <div class="max-w-[830px]"><span data-hero-in
+                        class="inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/15 px-5 py-2.5 text-[11px] font-black uppercase tracking-[.22em] backdrop-blur-lg"><span
+                            class="size-2 rounded-full bg-orange-300"></span> PAP’S Mali · L'univers des saveurs</span>
+                    <h1 data-hero-in
+                        class="mt-8 font-display text-[clamp(3.1rem,6.3vw,6.9rem)] font-extrabold leading-[1.04] tracking-[-.075em]">
+                        La fraîcheur<br>qui a du <span class="text-orange-300">caractère.</span></h1>
+                    <p data-hero-in class="mt-7 max-w-xl text-base leading-8 text-white/90 sm:text-xl sm:leading-9">Des
+                        saveurs qui se remarquent. Des moments qui se partagent. Découvrez l’univers PAP’S, entre
+                        boissons fruitées et sodas.</p>
+                    <div data-hero-in class="mt-9 flex flex-wrap gap-3"><a href="boissons.html"
+                            class="group inline-flex items-center gap-3 rounded-full bg-brand px-7 py-4 text-sm font-extrabold text-white shadow-xl shadow-orange-950/20 transition hover:-translate-y-1 hover:bg-deep">Explorer
+                            nos boissons <i data-lucide="arrow-up-right"
+                                class="size-4 transition group-hover:translate-x-1"></i></a><a href="soda.html"
+                            class="inline-flex items-center gap-3 rounded-full border border-white/60 bg-white/15 px-7 py-4 text-sm font-extrabold text-white backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/25">Découvrir
+                            PAP’S Soda <i data-lucide="arrow-right" class="size-4"></i></a></div>
+                </div>
+                <div data-hero-in class="hidden justify-end lg:flex">
+                    <div
+                        class="w-[270px] rounded-[2rem] border border-white/30 bg-white/15 p-7 shadow-2xl backdrop-blur-xl">
+                        <div class="mb-8 flex size-14 items-center justify-center rounded-2xl bg-white/20"><i
+                                data-lucide="sparkles" class="size-7"></i></div>
+                        <p class="text-xs font-black uppercase tracking-[.22em] text-orange-200">Deux univers</p>
+                        <p class="mt-3 font-display text-5xl font-extrabold">06 <span class="text-lg">+ 09</span></p>
+                        <p class="mt-3 text-sm leading-7 text-white/85">Six boissons fruitées et neuf sodas à explorer.
+                        </p><a href="#saveurs"
+                            class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-white">Explorer <i
+                                data-lucide="arrow-down-right" class="size-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#saveurs"
+                class="absolute bottom-7 left-6 flex items-center gap-3 text-xs font-extrabold uppercase tracking-[.2em] text-white/85 lg:left-12">Défiler
+                pour explorer <i data-lucide="arrow-down" class="size-4 animate-bounce"></i></a>
+        </section>
+        <!-- TICKER -->
+        <div class="overflow-hidden border-y border-orange-100 bg-cream py-5" aria-label="Nos saveurs">
+            <div id="ticker"
+                class="flex w-max gap-12 whitespace-nowrap font-display text-sm font-extrabold uppercase tracking-[.22em] text-deep">
+                <div class="flex items-center gap-12"><span>Orange ✦ Mangue ✦ Ananas ✦ Pomme ✦ Tamarin ✦ Gingembre ✦
+                        PAP’S Soda ✦</span></div>
+                <div aria-hidden="true" class="flex items-center gap-12"><span>Orange ✦ Mangue ✦ Ananas ✦ Pomme ✦
+                        Tamarin ✦ Gingembre ✦ PAP’S Soda ✦</span></div>
+            </div>
+        </div>
+        <!-- SAVEURS -->
+        <section id="saveurs" class="relative overflow-hidden bg-white py-20 sm:py-28">
+            <div
+                class="pointer-events-none absolute -right-40 top-0 size-[450px] rounded-full bg-orange-100 blur-[100px]">
+            </div>
+            <div class="relative mx-auto max-w-[1440px] px-6 lg:px-12">
+                <div class="mb-12 flex flex-wrap items-end justify-between gap-8">
+                    <div data-reveal><span class="text-xs font-black uppercase tracking-[.26em] text-deep">01 / Nos
+                            boissons</span>
+                        <h2
+                            class="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.1] tracking-[-.06em] sm:text-6xl">
+                            Des saveurs pour <span class="text-brand">chaque envie.</span></h2>
+                        <p class="mt-5 max-w-xl text-lg leading-8 text-stone-500">Une collection colorée, fruitée et
+                            pleine de personnalité.</p>
+                    </div><a href="boissons.html"
+                        class="inline-flex items-center gap-2 rounded-full border border-orange-200 px-6 py-3.5 text-sm font-extrabold text-deep transition hover:bg-orange-50">Voir
+                        les 6 saveurs <i data-lucide="arrow-up-right" class="size-4"></i></a>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <a data-reveal href="produits/orange.html"
+                        class="group overflow-hidden rounded-[2rem] border border-orange-100 bg-cream shadow-[0_20px_60px_-35px_rgba(120,53,15,.2)] transition duration-500 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/images/orange.jpg"
+                                alt="PAP’S Orange" loading="lazy"
+                                class="h-full w-full object-cover transition duration-700 group-hover:scale-110"><span
+                                class="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold text-deep">01
+                                / Orange</span></div>
+                        <div class="flex items-center justify-between gap-3 p-7">
+                            <div>
+                                <h3 class="font-display text-2xl font-extrabold">Orange</h3>
+                                <p class="mt-2 text-sm text-stone-500">Une signature lumineuse.</p>
+                            </div><span
+                                class="grid size-12 place-items-center rounded-full bg-brand text-white transition group-hover:rotate-45"><i
+                                    data-lucide="arrow-up-right" class="size-5"></i></span>
+                        </div>
+                    </a>
+                    <a data-reveal href="produits/mangue.html"
+                        class="group overflow-hidden rounded-[2rem] border border-orange-100 bg-cream shadow-[0_20px_60px_-35px_rgba(120,53,15,.2)] transition duration-500 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/images/mango.jpg"
+                                alt="PAP’S Mangue" loading="lazy"
+                                class="h-full w-full object-cover transition duration-700 group-hover:scale-110"><span
+                                class="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold text-deep">02
+                                / Mangue</span></div>
+                        <div class="flex items-center justify-between gap-3 p-7">
+                            <div>
+                                <h3 class="font-display text-2xl font-extrabold">Mangue</h3>
+                                <p class="mt-2 text-sm text-stone-500">Une douceur tropicale.</p>
+                            </div><span
+                                class="grid size-12 place-items-center rounded-full bg-brand text-white transition group-hover:rotate-45"><i
+                                    data-lucide="arrow-up-right" class="size-5"></i></span>
+                        </div>
+                    </a>
+                    <a data-reveal href="produits/ananas.html"
+                        class="group overflow-hidden rounded-[2rem] border border-orange-100 bg-cream shadow-[0_20px_60px_-35px_rgba(120,53,15,.2)] transition duration-500 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/images/pineapple.jpg"
+                                alt="PAP’S Ananas" loading="lazy"
+                                class="h-full w-full object-cover transition duration-700 group-hover:scale-110"><span
+                                class="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold text-deep">03
+                                / Ananas</span></div>
+                        <div class="flex items-center justify-between gap-3 p-7">
+                            <div>
+                                <h3 class="font-display text-2xl font-extrabold">Ananas</h3>
+                                <p class="mt-2 text-sm text-stone-500">Une touche d’évasion.</p>
+                            </div><span
+                                class="grid size-12 place-items-center rounded-full bg-brand text-white transition group-hover:rotate-45"><i
+                                    data-lucide="arrow-up-right" class="size-5"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div data-reveal class="mt-10 text-center"><a href="boissons.html"
+                        class="inline-flex items-center gap-2 text-sm font-extrabold text-deep hover:text-brand">Découvrir
+                        également Pomme, Tamarin et Gingembre <i data-lucide="arrow-right" class="size-4"></i></a></div>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section class="overflow-hidden bg-cream py-20 sm:py-28">
+            <div class="mx-auto grid max-w-[1440px] items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:px-12">
+                <div data-reveal class="relative">
+                    <div class="absolute -inset-3 -rotate-3 rounded-[2.5rem] bg-orange-200/65"></div><img
+                        src="assets/images/hero2.jpg" alt="L’univers PAP’S Mali" loading="lazy"
+                        class="relative aspect-[5/4.5] w-full rounded-[2rem] object-cover shadow-xl">
+                    <div
+                        class="absolute -bottom-6 right-4 rounded-2xl border border-orange-100 bg-white p-5 shadow-xl sm:right-[-20px]">
+                        <span class="text-xs font-black uppercase tracking-[.2em] text-deep">PAP’S Mali</span>
+                        <p class="mt-2 font-display text-lg font-extrabold">Une marque, des moments.</p>
+                    </div>
+                </div>
+                <div data-reveal class="pt-8 lg:pt-0"><span
+                        class="text-xs font-black uppercase tracking-[.26em] text-deep">02 / Notre univers</span>
+                    <h2 class="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-[-.06em] sm:text-6xl">
+                        Une identité forte.<br><span class="text-brand">Le goût du partage.</span></h2>
+                    <p class="mt-7 max-w-xl text-lg leading-9 text-stone-600">PAP’S Mali vous invite dans un univers de
+                        boissons fruitées et de sodas, pensé pour accompagner les instants simples comme les grandes
+                        occasions.</p>
+                    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-2xl border border-orange-100 bg-white p-5"><i data-lucide="citrus"
+                                class="size-7 text-brand"></i>
+                            <h3 class="mt-3 font-extrabold">Des saveurs variées</h3>
+                            <p class="mt-2 text-sm leading-6 text-stone-500">Des parfums pour toutes les envies.</p>
+                        </div>
+                        <div class="rounded-2xl border border-orange-100 bg-white p-5"><i data-lucide="heart-handshake"
+                                class="size-7 text-brand"></i>
+                            <h3 class="mt-3 font-extrabold">Des instants partagés</h3>
+                            <p class="mt-2 text-sm leading-6 text-stone-500">Une marque qui accompagne vos moments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SODA -->
+        <section class="relative isolate overflow-hidden bg-brand py-20 text-white sm:py-28">
+            <div class="pointer-events-none absolute -right-32 top-0 size-[460px] rounded-full bg-white/15 blur-[90px]">
+            </div>
+            <div class="relative mx-auto grid max-w-[1440px] items-center gap-14 px-6 lg:grid-cols-2 lg:px-12">
+                <div data-reveal><span class="text-xs font-black uppercase tracking-[.25em] text-white/85">03 / PAP’S
+                        Soda</span>
+                    <h2 class="mt-6 font-display text-5xl font-extrabold leading-[1.06] tracking-[-.065em] sm:text-7xl">
+                        Un nouveau<br>niveau de <span class="text-orange-100">fraîcheur.</span></h2>
+                    <p class="mt-7 max-w-xl text-lg leading-9 text-white/90">Neuf saveurs de sodas, neuf façons de faire
+                        pétiller vos moments. Explorez la collection PAP’S Soda.</p>
+                    <div class="mt-7 flex flex-wrap gap-2 text-xs font-bold"><span
+                            class="rounded-full border border-white/40 px-4 py-2">Cola</span><span
+                            class="rounded-full border border-white/40 px-4 py-2">Orange</span><span
+                            class="rounded-full border border-white/40 px-4 py-2">Tropical</span><span
+                            class="rounded-full border border-white/40 px-4 py-2">+ 6 autres</span></div><a
+                        href="soda.html"
+                        class="mt-9 inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-extrabold text-deep transition hover:-translate-y-1 hover:bg-orange-50">Découvrir
+                        PAP’S Soda <i data-lucide="arrow-up-right" class="size-4"></i></a>
+                </div>
+                <div data-reveal class="relative mx-auto w-full max-w-lg">
+                    <div class="absolute inset-8 rounded-full bg-white/25 blur-3xl"></div>
+                    <div
+                        class="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/15 p-4 shadow-2xl backdrop-blur-md">
+                        <img id="sodaSpotlight" src="assets/images/soda/orange-card.jpg" alt="PAP’S Soda Orange"
+                            loading="lazy" class="aspect-[4/4] w-full rounded-[2rem] bg-white object-contain p-4">
+                        <div class="mt-4 flex items-center justify-between px-3 pb-2">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-[.2em] text-white/70">À découvrir</p>
+                                <p id="sodaName" class="mt-1 font-display text-2xl font-extrabold">Orange</p>
+                            </div>
+                            <div class="flex gap-2"><button id="sodaPrev" aria-label="Soda précédent"
+                                    class="grid size-11 place-items-center rounded-full border border-white/60 hover:bg-white/20"><i
+                                        data-lucide="arrow-left" class="size-5"></i></button><button id="sodaNext"
+                                    aria-label="Soda suivant"
+                                    class="grid size-11 place-items-center rounded-full bg-white text-deep hover:bg-orange-50"><i
+                                        data-lucide="arrow-right" class="size-5"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ACTUALITES / SOCIAL -->
+        <section class="bg-white py-20 sm:py-28">
+            <div class="mx-auto max-w-[1440px] px-6 lg:px-12">
+                <div data-reveal class="mb-12 flex flex-wrap items-end justify-between gap-6">
+                    <div><span class="text-xs font-black uppercase tracking-[.26em] text-deep">04 / Restons
+                            connectés</span>
+                        <h2 class="mt-5 font-display text-4xl font-extrabold tracking-[-.06em] sm:text-6xl">La vie de
+                            <span class="text-brand">PAP’S.</span></h2>
+                        <p class="mt-5 max-w-xl text-lg leading-8 text-stone-500">Retrouvez nos publications, nos images
+                            et les moments qui font vivre la marque.</p>
+                    </div><a href="actualites.html"
+                        class="inline-flex items-center gap-2 rounded-full border border-orange-200 px-6 py-3.5 text-sm font-extrabold text-deep hover:bg-orange-50">Toutes
+                        les actualités <i data-lucide="arrow-up-right" class="size-4"></i></a>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2"><a data-reveal href="https://www.facebook.com/paps.mali/"
+                        target="_blank" rel="noopener noreferrer"
+                        class="group relative flex min-h-[330px] flex-col justify-between overflow-hidden rounded-[2rem] border border-orange-100 bg-cream p-8 transition hover:-translate-y-2 hover:shadow-xl sm:p-10">
+                        <div class="flex items-center justify-between"><span
+                                class="grid size-14 place-items-center rounded-2xl bg-brand text-white"><i
+                                    data-lucide="facebook" class="size-7"></i></span><i data-lucide="arrow-up-right"
+                                class="size-6 text-brand transition group-hover:rotate-45"></i></div>
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-[.2em] text-deep">La communauté PAP’S</p>
+                            <h3 class="mt-3 font-display text-4xl font-extrabold">Facebook<span
+                                    class="text-brand">.</span></h3>
+                            <p class="mt-3 text-stone-500">Actualités, échanges et publications.</p>
+                        </div>
+                    </a><a data-reveal href="https://www.instagram.com/paps.mali/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group relative flex min-h-[330px] flex-col justify-between overflow-hidden rounded-[2rem] border border-orange-100 bg-orange-50 p-8 transition hover:-translate-y-2 hover:shadow-xl sm:p-10">
+                        <div class="flex items-center justify-between"><span
+                                class="grid size-14 place-items-center rounded-2xl bg-brand text-white"><i
+                                    data-lucide="instagram" class="size-7"></i></span><i data-lucide="arrow-up-right"
+                                class="size-6 text-brand transition group-hover:rotate-45"></i></div>
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-[.2em] text-deep">L’univers en images</p>
+                            <h3 class="mt-3 font-display text-4xl font-extrabold">Instagram<span
+                                    class="text-brand">.</span></h3>
+                            <p class="mt-3 text-stone-500">Photos, inspirations et saveurs.</p>
+                        </div>
+                    </a></div>
+            </div>
+        </section>
+        <!-- CTA -->
+        <section class="bg-cream px-6 py-16 lg:px-12">
+            <div data-reveal
+                class="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 overflow-hidden rounded-[2.5rem] bg-brand p-9 text-white sm:p-14 lg:flex-row lg:items-center">
+                <div
+                    class="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full border-[45px] border-white/10">
+                </div>
+                <div class="relative"><span class="text-xs font-black uppercase tracking-[.25em] text-white/80">Votre
+                        prochain instant PAP’S</span>
+                    <h2 class="mt-4 font-display text-3xl font-extrabold tracking-[-.05em] sm:text-5xl">Prêt à découvrir
+                        votre saveur ?</h2>
+                </div><a href="galerie.html"
+                    class="relative inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-extrabold text-deep transition hover:-translate-y-1 hover:bg-orange-50">Explorer
+                    la galerie <i data-lucide="arrow-up-right" class="size-4"></i></a>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer-slot"></div>
+    <script src="assets/js/layout.js"></script>
+</body>
+
+</html>

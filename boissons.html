@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f97316">
+  <meta name="description" content="Découvrez les boissons PAP'S Mali : Orange, Mangue, Ananas, Pomme, Tamarin et Gingembre. Six saveurs pour accompagner tous vos moments.">
+  <title>Nos Boissons | PAP'S Mali — Six parfums, six univers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {theme:{extend:{
+      colors:{paps:{orange:'#F97316',dark:'#C2410C',light:'#FFF7ED',cream:'#FFFBF5',ink:'#27211D'}},
+      fontFamily:{sans:['DM Sans','sans-serif'],display:['Manrope','sans-serif']},
+      boxShadow:{card:'0 12px 40px rgba(124,45,18,.06)',hover:'0 24px 60px rgba(124,45,18,.13)'}
+    }}};
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <style>
+    :root{color-scheme:light}
+    html{scroll-padding-top:100px}
+    body{overflow-x:hidden}
+    .hero-orb{will-change:transform}
+    .hero-photo{transform:scale(1.02);will-change:transform}
+    .product-card{transform:translateZ(0);backface-visibility:hidden}
+    .product-image{will-change:transform}
+    .image-wrap{isolation:isolate}
+    .image-wrap:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(39,33,29,.02),transparent 45%,rgba(39,33,29,.08));opacity:.65}
+    .reveal-mask{overflow:hidden}
+    .cta-shine{position:absolute;inset:-60% auto -60% -40%;width:30%;transform:rotate(20deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);pointer-events:none}
+    .motion-safe{will-change:transform,opacity}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body class="bg-white font-sans text-paps-ink antialiased">
+  <div id="site-header-slot"></div>
+  <main>
+    <section class="hero-section relative isolate overflow-hidden bg-paps-cream">
+      <div class="hero-orb pointer-events-none absolute -right-32 -top-24 -z-10 h-96 w-96 rounded-full bg-orange-200/40 blur-3xl"></div>
+      <div class="hero-orb pointer-events-none absolute -bottom-32 -left-24 -z-10 h-80 w-80 rounded-full bg-orange-100/70 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
+        <div class="hero-content relative z-10">
+          <div class="hero-kicker mb-7 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-paps-dark sm:text-sm"><span class="h-2 w-2 rounded-full bg-paps-orange"></span>L'univers PAP'S</div>
+          <h1 class="hero-title font-display text-4xl font-extrabold leading-[1.12] tracking-tight text-paps-ink sm:text-5xl lg:text-6xl">Six parfums.<span class="mt-2 block text-paps-orange">Six univers.</span></h1>
+          <p class="hero-description mt-6 max-w-xl text-base leading-8 text-stone-600 sm:text-lg">Du soleil des agrumes à la douceur des fruits tropicaux, découvrez des saveurs pensées pour accompagner vos meilleurs moments.</p>
+          <div class="hero-actions mt-9 flex flex-wrap items-center gap-4">
+            <a href="#collection" class="magnetic-link inline-flex items-center gap-3 rounded-full bg-paps-orange px-7 py-4 text-sm font-bold text-white shadow-xl shadow-orange-200/70 transition duration-300 hover:-translate-y-1 hover:bg-paps-dark">Découvrir nos boissons<i data-lucide="arrow-down" class="h-4 w-4"></i></a>
+            <span class="text-sm font-medium text-stone-500">6 saveurs à découvrir</span>
+          </div>
+          <div class="hero-stats mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-orange-200/80 pt-7">
+            <div><p class="font-display text-2xl font-extrabold text-paps-ink">06</p><p class="mt-1 text-xs font-medium text-stone-500">Saveurs</p></div><div class="h-12 w-px bg-orange-200"></div>
+            <div><p class="font-display text-2xl font-extrabold text-paps-ink">100 %</p><p class="mt-1 text-xs font-medium text-stone-500">Plaisir</p></div><div class="h-12 w-px bg-orange-200"></div>
+            <div><p class="font-display text-2xl font-extrabold text-paps-ink">PAP'S</p><p class="mt-1 text-xs font-medium text-stone-500">Votre instant fraîcheur</p></div>
+          </div>
+        </div>
+        <div class="hero-visual relative mx-auto w-full max-w-xl">
+          <div class="hero-glow absolute inset-8 rounded-full bg-orange-200/50 blur-3xl"></div>
+          <div class="hero-frame relative overflow-hidden rounded-[2rem] border border-white bg-white p-3 shadow-2xl shadow-orange-900/10 sm:rounded-[2.5rem] sm:p-4">
+            <img src="assets/images/hero2.jpg" alt="L'univers fruité et rafraîchissant des boissons PAP'S" class="hero-photo h-[320px] w-full rounded-[1.5rem] object-cover sm:h-[440px] sm:rounded-[2rem]" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
+            <div class="hidden h-[320px] items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-orange-100 via-orange-50 to-white sm:h-[440px]"><div class="text-center"><i data-lucide="glass-water" class="mx-auto h-20 w-20 text-paps-orange"></i><p class="mt-5 font-display text-3xl font-extrabold text-paps-dark">PAP'S</p><p class="mt-2 text-sm text-stone-500">Le plaisir de la fraîcheur</p></div></div>
+            <div class="hero-float absolute bottom-7 left-7 right-7 rounded-2xl border border-white/70 bg-white/90 p-5 shadow-lg backdrop-blur-md sm:bottom-9 sm:left-9 sm:right-9">
+              <div class="flex items-center justify-between gap-4"><div><p class="text-xs font-bold uppercase tracking-[.15em] text-paps-orange">À chaque instant</p><p class="mt-1 font-display text-lg font-extrabold text-paps-ink sm:text-xl">Votre goût, votre PAP'S.</p></div><div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-100 text-paps-orange"><i data-lucide="sparkles" class="h-6 w-6"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collection" class="bg-white px-5 py-20 sm:py-24 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="collection-heading mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl"><p class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[.2em] text-paps-orange sm:text-sm"><span class="h-px w-8 bg-paps-orange"></span>Notre collection</p>
+            <h2 class="font-display text-3xl font-extrabold tracking-tight text-paps-ink sm:text-4xl lg:text-5xl">Quelle sera votre <span class="text-paps-orange">saveur préférée ?</span></h2>
+            <p class="mt-5 max-w-xl leading-7 text-stone-500">Chaque parfum possède son caractère. Explorez notre collection et trouvez la saveur qui vous ressemble.</p>
+          </div>
+          <div class="collection-pill flex items-center gap-3 self-start rounded-full border border-orange-100 bg-orange-50 px-5 py-3 md:self-auto"><i data-lucide="glass-water" class="h-5 w-5 text-paps-orange"></i><span class="text-sm font-bold text-stone-700">6 parfums à explorer</span></div>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          <article class="product-card group overflow-hidden rounded-[1.75rem] border border-orange-100 bg-white shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-hover"><a href="produits/orange.html" class="block" aria-label="Découvrir PAP'S Orange"><div class="image-wrap relative overflow-hidden bg-orange-50"><span class="absolute left-5 top-5 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-paps-dark shadow-sm">La classique</span><img src="assets/images/orange.jpg" alt="Boisson PAP'S Orange" loading="lazy" class="product-image h-64 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72"><span class="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-paps-orange shadow-md transition duration-300 group-hover:bg-paps-orange group-hover:text-white"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span></div><div class="p-6 sm:p-7"><p class="text-xs font-bold uppercase tracking-[.18em] text-paps-orange">Fraîcheur & énergie</p><h3 class="mt-3 font-display text-2xl font-extrabold">Orange</h3><p class="mt-3 text-sm leading-7 text-stone-500">Une saveur emblématique, lumineuse et pleine de caractère.</p><div class="mt-6 flex items-center justify-between border-t border-orange-100 pt-5"><span class="text-sm font-bold">PAP'S Orange</span><span class="card-link text-sm font-bold text-paps-orange">Découvrir <span aria-hidden="true">→</span></span></div></div></a></article>
+          <article class="product-card group overflow-hidden rounded-[1.75rem] border border-orange-100 bg-white shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-hover"><a href="produits/mangue.html" class="block" aria-label="Découvrir PAP'S Mangue"><div class="image-wrap relative overflow-hidden bg-orange-50"><span class="absolute left-5 top-5 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-paps-dark shadow-sm">Tropicale</span><img src="assets/images/mango.jpg" alt="Boisson PAP'S Mangue" loading="lazy" class="product-image h-64 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72"><span class="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-paps-orange shadow-md transition duration-300 group-hover:bg-paps-orange group-hover:text-white"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span></div><div class="p-6 sm:p-7"><p class="text-xs font-bold uppercase tracking-[.18em] text-paps-orange">Douceur & soleil</p><h3 class="mt-3 font-display text-2xl font-extrabold">Mangue</h3><p class="mt-3 text-sm leading-7 text-stone-500">Une touche tropicale et généreuse pour des instants gourmands.</p><div class="mt-6 flex items-center justify-between border-t border-orange-100 pt-5"><span class="text-sm font-bold">PAP'S Mangue</span><span class="card-link text-sm font-bold text-paps-orange">Découvrir <span aria-hidden="true">→</span></span></div></div></a></article>
+          <article class="product-card group overflow-hidden rounded-[1.75rem] border border-orange-100 bg-white shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-hover"><a href="produits/ananas.html" class="block" aria-label="Découvrir PAP'S Ananas"><div class="image-wrap relative overflow-hidden bg-orange-50"><span class="absolute left-5 top-5 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-paps-dark shadow-sm">Exotique</span><img src="assets/images/pineapple.jpg" alt="Boisson PAP'S Ananas" loading="lazy" class="product-image h-64 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72"><span class="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-paps-orange shadow-md transition duration-300 group-hover:bg-paps-orange group-hover:text-white"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span></div><div class="p-6 sm:p-7"><p class="text-xs font-bold uppercase tracking-[.18em] text-paps-orange">Évasion & fraîcheur</p><h3 class="mt-3 font-display text-2xl font-extrabold">Ananas</h3><p class="mt-3 text-sm leading-7 text-stone-500">Une inspiration ensoleillée pour donner du relief à vos pauses.</p><div class="mt-6 flex items-center justify-between border-t border-orange-100 pt-5"><span class="text-sm font-bold">PAP'S Ananas</span><span class="card-link text-sm font-bold text-paps-orange">Découvrir <span aria-hidden="true">→</span></span></div></div></a></article>
+          <article class="product-card group overflow-hidden rounded-[1.75rem] border border-orange-100 bg-white shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-hover"><a href="produits/pomme.html" class="block" aria-label="Découvrir PAP'S Pomme"><div class="image-wrap relative overflow-hidden bg-orange-50"><span class="absolute left-5 top-5 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-paps-dark shadow-sm">Tout en douceur</span><img src="assets/images/apple.jpg" alt="Boisson PAP'S Pomme" loading="lazy" class="product-image h-64 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72"><span class="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-paps-orange shadow-md transition duration-300 group-hover:bg-paps-orange group-hover:text-white"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span></div><div class="p-6 sm:p-7"><p class="text-xs font-bold uppercase tracking-[.18em] text-paps-orange">Simplicité & plaisir</p><h3 class="mt-3 font-display text-2xl font-extrabold">Pomme</h3><p class="mt-3 text-sm leading-7 text-stone-500">Une saveur familière qui s'invite naturellement dans vos journées.</p><div class="mt-6 flex items-center justify-between border-t border-orange-100 pt-5"><span class="text-sm font-bold">PAP'S Pomme</span><span class="card-link text-sm font-bold text-paps-orange">Découvrir <span aria-hidden="true">→</span></span></div></div></a></article>
+          <article class="product-card group overflow-hidden rounded-[1.75rem] border border-orange-100 bg-white shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-hover"><a href="produits/tamarin.html" class="block" aria-label="Découvrir PAP'S Tamarin"><div class="image-wrap relative overflow-hidden bg-orange-50"><span class="absolute left-5 top-5 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-paps-dark shadow-sm">Authentique</span><img src="assets/images/tamarin.jpg" alt="Boisson PAP'S Tamarin" loading="lazy" class="product-image h-64 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72"><span class="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-paps-orange shadow-md transition duration-300 group-hover:bg-paps-orange group-hover:text-white"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span></div><div class="p-6 sm:p-7"><p class="text-xs font-bold uppercase tracking-[.18em] text-paps-orange">Caractère & tradition</p><h3 class="mt-3 font-display text-2xl font-extrabold">Tamarin</h3><p class="mt-3 text-sm leading-7 text-stone-500">Une saveur singulière qui met à l'honneur un goût plein de personnalité.</p><div class="mt-6 flex items-center justify-between border-t border-orange-100 pt-5"><span class="text-sm font-bold">PAP'S Tamarin</span><span class="card-link text-sm font-bold text-paps-orange">Découvrir <span aria-hidden="true">→</span></span></div></div></a></article>
+          <article class="product-card group overflow-hidden rounded-[1.75rem] border border-orange-100 bg-white shadow-card transition duration-500 hover:-translate-y-2 hover:shadow-hover"><a href="produits/gingembre.html" class="block" aria-label="Découvrir PAP'S Gingembre"><div class="image-wrap relative overflow-hidden bg-orange-50"><span class="absolute left-5 top-5 z-10 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-paps-dark shadow-sm">Intense</span><img src="assets/images/ginginbre.jpg" alt="Boisson PAP'S Gingembre" loading="lazy" class="product-image h-64 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-72"><span class="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-paps-orange shadow-md transition duration-300 group-hover:bg-paps-orange group-hover:text-white"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span></div><div class="p-6 sm:p-7"><p class="text-xs font-bold uppercase tracking-[.18em] text-paps-orange">Intensité & originalité</p><h3 class="mt-3 font-display text-2xl font-extrabold">Gingembre</h3><p class="mt-3 text-sm leading-7 text-stone-500">Une personnalité affirmée pour ceux qui aiment les saveurs qui se distinguent.</p><div class="mt-6 flex items-center justify-between border-t border-orange-100 pt-5"><span class="text-sm font-bold">PAP'S Gingembre</span><span class="card-link text-sm font-bold text-paps-orange">Découvrir <span aria-hidden="true">→</span></span></div></div></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section px-5 pb-20 sm:pb-24 lg:px-8">
+      <div class="cta-panel relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-paps-orange px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
+        <div class="cta-shape pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full border-[45px] border-white/10"></div><div class="cta-shape pointer-events-none absolute -bottom-28 -left-16 h-64 w-64 rounded-full border-[35px] border-white/10"></div><div class="cta-shine"></div>
+        <div class="cta-content relative z-10 flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+          <div class="max-w-2xl"><p class="mb-4 text-xs font-bold uppercase tracking-[.2em] text-white/80 sm:text-sm">L'expérience PAP'S</p><h2 class="font-display text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">Le bon goût rassemble.</h2><p class="mt-5 max-w-xl leading-7 text-white/85">Une question sur nos boissons ou envie de découvrir PAP'S ? Notre équipe est à votre écoute.</p></div>
+          <a href="contact.html" class="magnetic-link inline-flex shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-bold text-paps-dark shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-orange-50">Parlons de votre projet<i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer-slot"></div>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/boissons.js"></script>
+</body>
+</html>

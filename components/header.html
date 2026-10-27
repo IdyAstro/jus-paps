@@ -1,0 +1,40 @@
+<header id="siteHeader" class="paps-site-header fixed inset-x-0 top-0 z-50 border-b border-orange-100/80 bg-white/95 backdrop-blur-2xl transition-shadow duration-300">
+  <div class="mx-auto flex h-[82px] max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 xl:px-12">
+    <a href="__ROOT__index.html" class="flex shrink-0 items-center gap-3" aria-label="PAP’S Mali — Accueil">
+      <span class="grid size-12 place-items-center rounded-2xl bg-[#f58213] text-2xl font-black text-white shadow-lg shadow-orange-500/20">P’</span>
+      <span class="leading-tight">
+        <strong class="block text-2xl font-black tracking-[-.08em] text-slate-950">PAP’S</strong>
+        <small class="text-[9px] font-black tracking-[.26em] text-orange-600">MALI · BOISSONS</small>
+      </span>
+    </a>
+    <nav class="hidden items-center gap-1 xl:flex" aria-label="Navigation principale">
+      <a data-nav="index.html" href="__ROOT__index.html" class="paps-nav-link">Accueil</a>
+
+      <a data-nav="boissons.html" href="__ROOT__boissons.html" class="paps-nav-link">Nos boissons</a>
+      <a data-nav="soda.html" href="__ROOT__soda.html" class="paps-nav-link">PAP’S Soda</a>
+      <a data-nav="actualites.html" href="__ROOT__actualites.html" class="paps-nav-link">Actualités</a>
+      <a data-nav="galerie.html" href="__ROOT__galerie.html" class="paps-nav-link">Galerie</a>
+      <a data-nav="contact.html" href="__ROOT__contact.html" class="paps-nav-link">Contact</a>
+    </nav>
+    <div class="hidden xl:block">
+      <a href="__ROOT__contact.html" class="inline-flex items-center gap-2 rounded-full bg-[#f58213] px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-orange-500/20 transition hover:-translate-y-0.5 hover:bg-orange-600">
+        Nous contacter <i data-lucide="arrow-up-right" class="size-4"></i>
+      </a>
+    </div>
+    <button id="menuButton" type="button" class="grid size-11 place-items-center rounded-xl border border-orange-100 text-slate-900 transition hover:bg-orange-50 xl:hidden" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+      <i data-lucide="menu" class="size-5"></i>
+    </button>
+  </div>
+  <nav id="mobileNav" class="hidden border-t border-orange-100 bg-white px-5 pb-5 pt-3 shadow-xl xl:hidden" aria-label="Navigation mobile">
+    <div class="mx-auto grid max-w-[1440px] gap-1 sm:grid-cols-2">
+      <a data-nav="index.html" href="__ROOT__index.html" class="paps-mobile-link">Accueil</a>
+      <a data-nav="entreprise.html" href="__ROOT__entreprise.html" class="paps-mobile-link">L’entreprise</a>
+      <a data-nav="boissons.html" href="__ROOT__boissons.html" class="paps-mobile-link">Nos boissons</a>
+      <a data-nav="soda.html" href="__ROOT__soda.html" class="paps-mobile-link">PAP’S Soda</a>
+      <a data-nav="actualites.html" href="__ROOT__actualites.html" class="paps-mobile-link">Actualités</a>
+      <a data-nav="galerie.html" href="__ROOT__galerie.html" class="paps-mobile-link">Galerie</a>
+      <a data-nav="contact.html" href="__ROOT__contact.html" class="paps-mobile-link">Contact</a>
+      <a href="__ROOT__contact.html" class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#f58213] px-4 py-3 font-bold text-white">Nous contacter <i data-lucide="arrow-up-right" class="size-4"></i></a>
+    </div>
+  </nav>
+</header>

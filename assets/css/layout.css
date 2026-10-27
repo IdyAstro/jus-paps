@@ -1,0 +1,41 @@
+/* Composants globaux PAP’S : header et footer uniques */
+.paps-nav-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: .65rem .78rem;
+  color: #57534e;
+  font-size: 13px;
+  font-weight: 750;
+  transition: color .2s ease, background-color .2s ease, transform .2s ease;
+}
+.paps-nav-link:hover,
+.paps-nav-link.is-current {
+  color: #c65305;
+  background: #fff3e8;
+}
+.paps-mobile-link {
+  display: block;
+  border-radius: .85rem;
+  padding: .8rem 1rem;
+  color: #292524;
+  font-weight: 700;
+  transition: background-color .2s ease, color .2s ease;
+}
+.paps-mobile-link:hover,
+.paps-mobile-link.is-current {
+  color: #c65305;
+  background: #fff3e8;
+}
+.paps-component-error {
+  margin: .5rem;
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  background: #fff3e8;
+  color: #9a3412;
+  font-size: .875rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .paps-nav-link, .paps-mobile-link { transition: none; }
+}
+
